@@ -1,6 +1,18 @@
 #!/usr/bin/env ruby
 
 require 'jira'
+require 'optparse'
 
-Jira.new.say_hi
+opts = OptionParser.new do |opts|
+  opts.banner = "Jira example usage: jira [command] [args]"
+
+  Jira.registered_commands.each do |command|
+    opts.banner += "\n\t#{command.description}"
+  end
+end
+
+puts opts
+
+
+
 

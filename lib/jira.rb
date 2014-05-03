@@ -1,5 +1,7 @@
+require 'commands/log_work'
+
 class Jira
-  def say_hi
-    puts "howdy!"
+  def self.registered_commands
+    [Jira::Commands::LogWork]
   end
 end

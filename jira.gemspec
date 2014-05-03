@@ -5,5 +5,5 @@ Gem::Specification.new do |g|
   g.summary = 'Update JIRA tickets from the commandline.'
   g.authors = ['David Weiser']
   g.executables << 'jira'
-  g.files = ['lib/jira.rb']
+  g.files = ['lib/jira.rb', 'lib/commands/log_work.rb']
 end
