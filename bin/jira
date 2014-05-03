@@ -8,11 +8,9 @@ opts = OptionParser.new do |opts|
 
   opts.on('-l', '--log_work [TIME]', String, 'logs work to the current ticket: --log_work 2h') do |time|
     Jira::Commands::LogWork.log!(time)
+    exit
   end
 end
 
-puts opts
-
-
-
-
+puts opts if ARGV.empty?
+opts.parse(ARGV)
